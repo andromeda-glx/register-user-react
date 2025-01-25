@@ -1,0 +1,9 @@
+header{
+    box-shadow: 0px 1px 5px 1px rgb(0, 0, 0, 0.5);
+}
+
+.header{
+    background-color: #3d57c2;
+    padding: 1rem;
+    color: #fff;
+}
