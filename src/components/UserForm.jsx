@@ -10,12 +10,12 @@ export default function UserForm() {
                     inputName={"name"}
                     labelText={"Username: "}
                 />
-                <Input 
+                <Input
                     inputType={"email"}
                     inputName={"email"}
                     labelText={"Email: "}
                 />
-                <Input 
+                <Input
                     inputType={"date"}
                     inputName={"date"}
                     labelText={"Date of Birth: "}
