@@ -9,7 +9,7 @@ export default function Main() {
     const [users, setUsers] = useState([]);
 
     function addUser(user) {
-        setUsers([...users, user]);
+        setUsers([user, ...users]);
     }
 
     function clearAll() {
@@ -17,7 +17,7 @@ export default function Main() {
     }
 
     function generateRandomUsers() {
-        setUsers([...users, ...randomUsers]);
+        setUsers([...randomUsers, ...users]);
     }
 
     return (
