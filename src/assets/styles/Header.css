@@ -14,11 +14,3 @@ header{
 .header h1{
     font-weight: 500;
 }
-
-.clear-all-btn{
-    color: #fff;
-    background-color: #C23D57;
-}
-.clear-all-btn:hover{
-    background-color: #8a2539;
-}

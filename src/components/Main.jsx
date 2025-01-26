@@ -2,7 +2,8 @@ import UserForm from "./UserForm";
 import "../assets/styles/Main.css"
 import { useState } from "react";
 import UserCard from "./UserCard";
-import ClearAll from "./ClearAll";
+import FiltersTab from "./FiltersTab";
+import randomUsers from "../data/random-users";
 
 export default function Main() {
     const [users, setUsers] = useState([]);
@@ -15,10 +16,14 @@ export default function Main() {
         setUsers([]);
     }
 
+    function generateRandomUsers() {
+        setUsers([...users, ...randomUsers]);
+    }
+
     return (
         <main>
             <UserForm addUser={addUser} />
-            <ClearAll click={clearAll} />
+            <FiltersTab onClearAll={clearAll} onRandomUser={generateRandomUsers} />
             <div className="users-c">
                 <ul className="users">
                     {users.map((user, index) => (
