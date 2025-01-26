@@ -1,6 +1,7 @@
 import "../assets/styles/Header.css"
+import Button from "./Button";
 
-export default function Header(){
+export default function Header({ click }) {
     return (
         <header>
             <div className="header">

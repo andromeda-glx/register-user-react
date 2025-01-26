@@ -6,8 +6,19 @@ header{
     background-color: #3d57c2;
     padding: 1rem;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header h1{
     font-weight: 500;
+}
+
+.clear-all-btn{
+    color: #fff;
+    background-color: #C23D57;
+}
+.clear-all-btn:hover{
+    background-color: #8a2539;
 }
