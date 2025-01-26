@@ -1,13 +1,14 @@
 import "../assets/styles/Input.css"
 
-export default function Input({ inputType, inputName, labelText, inputDefaultValue }) {
+export default function Input({ inputType, inputName, inputPlaceholder, labelText }) {
     return (
         <div className="input-c">
             <label htmlFor={inputName}>{labelText}</label>
             <input
+                className="user-input"
                 type={inputType}
                 name={inputName}
-                defaultValue={inputDefaultValue}
+                placeholder={inputPlaceholder}
             />
         </div>
     );

@@ -8,9 +8,16 @@ export default function UserForm({ addUser }) {
         const formData = new FormData(event.target);
         const name = formData.get("name");
         const email = formData.get("email");
-        const date = new Date(formData.get("date"));
+        const date = formData.get("date");
 
-        addUser({name, email, date});
+        if (name && email && date) {
+            const formattedDate = new Date(date);
+            document.querySelectorAll(".user-input").forEach(input => input.value = "");
+            addUser({ name, email, date: formattedDate });
+        }
+        else{
+            alert("Inputs cannot be empty");
+        }
     }
 
     return (
@@ -20,19 +27,18 @@ export default function UserForm({ addUser }) {
                     inputType={"text"}
                     inputName={"name"}
                     labelText={"Username: "}
-                    inputDefaultValue={"JohnDoe"}
+                    inputPlaceholder={"JohnDoe123"}
                 />
                 <Input
                     inputType={"email"}
                     inputName={"email"}
                     labelText={"Email: "}
-                    inputDefaultValue={"something@example.com"}
+                    inputPlaceholder={"example@email.com"}
                 />
                 <Input
                     inputType={"date"}
                     inputName={"date"}
                     labelText={"Date of Birth: "}
-                    inputDefaultValue={"1999-01-01"}
                 />
                 <Button text={"Register User"} buttonClass={"register-btn"} />
             </form>

@@ -5,7 +5,7 @@ import UserCard from "./UserCard";
 import ClearAll from "./ClearAll";
 
 export default function Main() {
-    const [users, setUsers] = useState([{name: "Faran", email: "faran.7j99@gmail.com", date: new Date(1999, 6, 7)}]);
+    const [users, setUsers] = useState([]);
 
     function addUser(user) {
         setUsers([...users, user]);
